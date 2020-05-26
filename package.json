@@ -7,8 +7,10 @@
     "anydoor": "bin/anydoor"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "supervisor src/app.js"
+    "start": "supervisor src/app.js",
+    "gulp": "gulp",
+    "test": "mocha test/mocha.js",
+    "cover": "istanbul cover _mocha --reporter test/mocha.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,16 @@
   },
   "homepage": "https://github.com/C-old-M-oon/anydoor#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "handlebars": "^4.1.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "gulp": "^4.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.4"
   }
 }
